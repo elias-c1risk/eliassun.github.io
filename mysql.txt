@@ -1,0 +1,8 @@
+1. flyway db failure
+mysqlworkbench:
+select * from your_database_name.flyway_schema_history
+then delete the failed one
+
+2. permission to log bin 
+mysql -h 127.0.0.1 -u root -p
+set global log_bin_trust_function_creators=1;
